@@ -1,0 +1,21 @@
+html
+  title= title
+  script(src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous")
+  link(href='public/main/main.css' rel="stylesheet" type="text/css")
+  link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous")
+
+  link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous")
+  body
+    block navigation
+      div.container
+        div.row
+          div.col-md-12
+            ul.nav.nav-tabs
+              each value in menu
+                li(role="presentation").navigation-elements
+                  a(href= '/' + value).header-menu= value.toUpperCase()
+
+    block content
+
+    script(src="public/main/index.js")
+

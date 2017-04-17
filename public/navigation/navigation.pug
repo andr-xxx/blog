@@ -1,0 +1,10 @@
+extends ../layout/layout.pug
+
+block navigation
+  div.container
+    div.row
+      div.col-md-12
+        ul.nav.nav-tabs
+          each value in menu
+            li(role="presentation")
+              a(href= '/' + value).header-menu= value

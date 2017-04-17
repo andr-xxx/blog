@@ -1,0 +1,30 @@
+body {
+    background-color: beige !important;
+}
+
+.navigation-elements {
+    text-align: center;
+}
+
+.post {
+    border: 1px solid black;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.post-date {
+    float: right;
+}
+
+.submit-button.users-post{
+    margin:auto;
+}
+
+.remove-button {
+    display: block !important;
+    text-align: right ;
+    margin-top: 30px;
+    margin-right: 30px;
+    cursor: pointer;
+    color: blue
+}
