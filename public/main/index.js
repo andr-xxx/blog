@@ -21,7 +21,6 @@
 
   $('.remove-button').on('click', (e) => {
     const postId = $(e.target).closest('.post-block').find('.post-id').text();
-    console.log(postId)
 
     $.ajax({
       type: 'DELETE',
@@ -31,4 +30,6 @@
       },
     })
   })
+
+  $('#registration-form').subm
 })();

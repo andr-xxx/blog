@@ -28,3 +28,9 @@ body {
     cursor: pointer;
     color: blue
 }
+
+.submit-registration {
+    float: right;
+    padding: 8px 20px 8px 20px;
+    font-size: 18px;
+}

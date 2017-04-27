@@ -24,7 +24,7 @@ app.get('/contact', (req, res) => {
     title: 'Contacts',
     author: 'Andrey',
     phone: '(050) 71 39 416',
-    menu: ['home', 'contact', 'about']
+    menu: ['home', 'contact', 'about', 'registration']
   })
 });
 
@@ -32,7 +32,7 @@ app.get('/about', (req, res) => {
   res.render(__dirname + `/public/about/about.pug`, {
     title: 'About',
     textAbout: 'My first NodeJS application',
-    menu: ['home', 'contact', 'about']
+    menu: ['home', 'contact', 'about', 'registration']
   })
 });
 
@@ -64,6 +64,10 @@ app.delete('/api/deletePost', (req, res) => {
   });
 });
 app.listen(9002);
+
+app.get('/registration', (req, res) => {
+  res.render(__dirname + `/public/registration/index.pug`)
+});
 
 function renderAllPosts(req, res) {
   mongoClient.connect(url, (err, db) => {

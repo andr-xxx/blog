@@ -1,0 +1,25 @@
+extends ../layout/layout.pug
+
+block content
+  div.container
+    div.row
+      div.col-md-7
+      div.col-md-5
+        form#registration-form
+          div.form-group
+            label(for="name") Name
+            input(type="text" class="form-control" id="name" placeholder="Name")
+          div.form-group
+            label(for="secondName") Second Name
+            input(type="text" class="form-control" id="secondName" placeholder="Second Name")
+          div.form-group
+            label(for="email") Email address
+            input(type="email" class="form-control" id="email" placeholder="Email")
+          div.form-group
+            label(for="typePassword") Password
+            input(type="password" class="form-control" id="typePassword" placeholder="Password")
+          div.form-group
+            label(for="confirmPassword") Confirm Password
+            input(type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password")
+          button(type="submit").btn.btn-success.submit-registration Submit
+

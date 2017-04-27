@@ -11,9 +11,10 @@ html
         div.row
           div.col-md-12
             ul.nav.nav-tabs
-              each value in menu
-                li(role="presentation").navigation-elements
-                  a(href= '/' + value).header-menu= value.toUpperCase()
+              if menu
+                each value in menu
+                  li(role="presentation").navigation-elements
+                    a(href= '/' + value).header-menu= value.toUpperCase()
 
     block content
 
