@@ -2,16 +2,16 @@ extends ../layout/layout.pug
 
 block content
   div.container
-    if posts
-      each value in posts
-        div.row.post-block
-          div.col-xs-11.col-md-11
-            span.post-user= value.user
-            span.post-date DATE: #{value.date}
-            span.post-id= value._id
-            p.post= value.body
-          div.col-xs-1.col-md-1
-            span(aria-hidden="true").glyphicon.glyphicon-remove.remove-button
+    div.post-area
+      if posts
+        each value in posts
+          div.row.post-block
+            div.col-xs-11.col-md-11
+              span.post-user= value.user
+              span.post-date DATE: #{value.date}
+              p.post= value.body
+            div.col-xs-1.col-md-1
+              span(aria-hidden="true", data-id=value._id).glyphicon.glyphicon-remove.remove-button
 
   div.container
     div.row

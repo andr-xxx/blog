@@ -51,13 +51,11 @@ app.post('/api/addPost', (req, res) => {
 });
 
 app.delete('/api/deletePost', (req, res) => {
-  // const id = req.body.id;
   const id = new objectId(req.body.id);
   mongoClient.connect(url, (err, db) => {
     db.collection("posts").findOneAndDelete({_id: id}, (err, result) => {
 
       if (err) return res.status(400).send();
-      console.log(result)
       renderAllPosts(req, res);
       db.close();
     });
@@ -76,6 +74,7 @@ function renderAllPosts(req, res) {
         menu: ['home', 'contact', 'about'],
         posts: posts,
       });
+      // res.send('hello')
       db.close();
     });
   });
